@@ -4,7 +4,6 @@ using System.Collections;
 public class GenerateSides : MonoBehaviour {
 	public GameObject Sides;
 	public int NumberSides;
-	public int mag;
 	private float GonAngle;
 	// Use this for initialization
 	void Start () {
@@ -15,8 +14,8 @@ public class GenerateSides : MonoBehaviour {
 
 		angle = 2.0f * Mathf.PI / NumberSides;
 		for (int i = 0; i < NumberSides; i++) {
-			x = mag * Mathf.Cos (angle * i + Mathf.PI / 2.0f);
-			y = mag * Mathf.Sin (angle * i + Mathf.PI / 2.0f);
+			x = 10.0f * Mathf.Cos (angle * i + Mathf.PI / 2.0f);
+			y = 10.0f * Mathf.Sin (angle * i + Mathf.PI / 2.0f);
 			rotate = angle * i * 180.0f / Mathf.PI;
 			Quaternion rotation = Quaternion.Euler (0, 0, rotate);
 			Vector3 pos = new Vector3 (x, y, 0.0f);
@@ -37,8 +36,8 @@ public class GenerateSides : MonoBehaviour {
 		GonSides = GameObject.FindGameObjectsWithTag ("Block");
 		angle = 2.0f * Mathf.PI / NumberSides;
 		for (int i = 0; i < NumberSides; i++) {
-			x = mag * Mathf.Cos (angle * i + Mathf.PI / 2.0f + GonAngle);
-			y = mag * Mathf.Sin (angle * i + Mathf.PI / 2.0f + GonAngle);
+			x = 10.0f * Mathf.Cos (angle * i + Mathf.PI / 2.0f + GonAngle);
+			y = 10.0f * Mathf.Sin (angle * i + Mathf.PI / 2.0f + GonAngle);
 			rotate = ((angle * i + GonAngle) * 180.0f) / Mathf.PI;
 			Quaternion rotation = Quaternion.Euler (0, 0, rotate);
 			Vector3 pos = new Vector3 (x, y, 0.0f);

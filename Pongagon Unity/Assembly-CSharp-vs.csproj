@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\GeneratePong.cs" />
      <Compile Include="Assets\Scripts\GenerateSides.cs" />
-     <Compile Include="Assets\Scripts\Velocity.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
